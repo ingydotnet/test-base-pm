@@ -1,4 +1,9 @@
 ---
+version: 0.55
+date:    Thu Dec  4 01:10:11 PST 2008
+changes:
+- Module::Install::TestBase::use_test_base require 'Filter::Util::Call' now.
+---
 version: 0.54
 date:    Wed Nov 29 15:21:02 PST 2006
 changes:

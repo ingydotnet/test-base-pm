@@ -4,7 +4,7 @@ package Test::Base;
 use 5.006001;
 use Spiffy 0.30 -Base;
 use Spiffy ':XXX';
-our $VERSION = '0.54';
+our $VERSION = '0.55';
 
 my @test_more_exports;
 BEGIN {
@@ -646,6 +646,8 @@ sub _get_filters {
 }
 
 __DATA__
+
+=encoding utf8
 
 =head1 NAME
 
@@ -1317,8 +1319,8 @@ Ingy döt Net <ingy@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2006. Ingy döt Net. All rights reserved.
-Copyright (c) 2005. Brian Ingerson. All rights reserved.
+Copyright (c) 2006, 2008. Ingy döt Net.
+Copyright (c) 2005. Brian Ingerson.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
