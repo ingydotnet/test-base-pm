@@ -166,9 +166,21 @@ EXPORTED FUNCTIONS
     NOTE: Test::Base will silently ignore any blocks that don't contain both
     sections.
 
+  is_deep($data1, $data2, $test_name)
+    Like Test::More's "is_deeply" but uses the more correct Test::Deep
+    module.
+
+  run_is_deeply([data_name1, data_name2])
+    Like "run_is_deeply" but uses "is_deep" which uses the more correct
+    Test::Deep.
+
   run_is_deeply([data_name1, data_name2])
     Like "run_is" but uses "is_deeply" for complex data structure
     comparison.
+
+  run_is_deeply([data_name1, data_name2])
+    Like "run_is_deeply" but uses "is_deep" which uses the more correct
+    Test::Deep.
 
   run_like([data_name, regexp | data_name]);
     The "run_like" function is similar to "run_is" except the second
@@ -620,8 +632,8 @@ AUTHOR
     Ingy döt Net <ingy@cpan.org>
 
 COPYRIGHT
-    Copyright (c) 2006, 2008. Ingy döt Net. All rights reserved. Copyright
-    (c) 2005. Brian Ingerson. All rights reserved.
+    Copyright (c) 2006, 2008, 2009. Ingy döt Net. Copyright (c) 2005. Brian
+    Ingerson.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

@@ -8,6 +8,8 @@ requires    Spiffy => '0.30';
 requires    Test::More => '0.62';
 requires    Filter::Util::Call => '0';
 
+recommends 'Test::Deep';
+
 clean_files 't/output';
 
 WriteAll;

@@ -1,4 +1,9 @@
 ---
+version: 0.56
+date:    Sat Mar  7 12:13:32 PST 2009
+changes:
+- Add Test::Deep support with is_deep and run_is_deep
+---
 version: 0.55
 date:    Thu Dec  4 01:10:11 PST 2008
 changes:

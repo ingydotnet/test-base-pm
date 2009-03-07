@@ -4,7 +4,7 @@ package Test::Base;
 use 5.006001;
 use Spiffy 0.30 -Base;
 use Spiffy ':XXX';
-our $VERSION = '0.55';
+our $VERSION = '0.56';
 
 my @test_more_exports;
 BEGIN {
@@ -28,6 +28,7 @@ our @EXPORT = (@test_more_exports, qw(
     delimiters spec_file spec_string 
     filters filters_delay filter_arguments
     run run_compare run_is run_is_deeply run_like run_unlike 
+    skip_all_unless_require is_deep run_is_deep
     WWW XXX YYY ZZZ
     tie_output no_diag_on_only
 
@@ -366,6 +367,34 @@ sub run_unlike() {
         unlike($block->$x, $regexp,
                $block->name ? $block->name : ()
               );
+    }
+}
+
+sub skip_all_unless_require() {
+    (my ($self), @_) = find_my_self(@_);
+    my $module = shift;
+    eval "require $module; 1"
+        or Test::More::plan(
+            skip_all => "$module failed to load"
+        );
+}
+
+sub is_deep() {
+    (my ($self), @_) = find_my_self(@_);
+    require Test::Deep;
+    Test::Deep::cmp_deeply(@_);
+}
+
+sub run_is_deep() {
+    (my ($self), @_) = find_my_self(@_);
+    $self->_assert_plan;
+    my ($x, $y) = $self->_section_names(@_);
+    for my $block (@{$self->block_list}) {
+        next unless exists($block->{$x}) and exists($block->{$y});
+        $block->run_filters unless $block->is_filtered;
+        is_deep($block->$x, $block->$y, 
+           $block->name ? $block->name : ()
+          );
     }
 }
 
@@ -827,9 +856,24 @@ automatically.
 NOTE: Test::Base will silently ignore any blocks that don't contain
 both sections.
 
+=head2 is_deep($data1, $data2, $test_name)
+
+Like Test::More's C<is_deeply> but uses the more correct
+Test::Deep module.
+
+=head2 run_is_deeply([data_name1, data_name2])
+
+Like C<run_is_deeply> but uses C<is_deep> which uses the more correct
+Test::Deep.
+
 =head2 run_is_deeply([data_name1, data_name2])
 
 Like C<run_is> but uses C<is_deeply> for complex data structure comparison.
+
+=head2 run_is_deeply([data_name1, data_name2])
+
+Like C<run_is_deeply> but uses C<is_deep> which uses the more correct
+Test::Deep.
 
 =head2 run_like([data_name, regexp | data_name]);
 
@@ -1319,7 +1363,7 @@ Ingy döt Net <ingy@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2006, 2008. Ingy döt Net.
+Copyright (c) 2006, 2008, 2009. Ingy döt Net.
 Copyright (c) 2005. Brian Ingerson.
 
 This program is free software; you can redistribute it and/or modify it
