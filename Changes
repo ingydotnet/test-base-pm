@@ -1,4 +1,9 @@
 ---
+version: 0.58
+date:    Thu Mar 26 17:26:13 PDT 2009
+changes:
+- Another undef filtering change.
+---
 version: 0.57
 date:    Thu Mar 26 16:42:03 PDT 2009
 changes:
