@@ -4,7 +4,7 @@ package Test::Base;
 use 5.006001;
 use Spiffy 0.30 -Base;
 use Spiffy ':XXX';
-our $VERSION = '0.56';
+our $VERSION = '0.57';
 
 my @test_more_exports;
 BEGIN {
@@ -613,7 +613,9 @@ sub run_filters {
             my $function = "main::$filter";
             no strict 'refs';
             if (defined &$function) {
-                local $_ = join '', @value;
+                local $_ =
+                    (@value == 1 and not defined($value[0])) ? undef :
+                        join '', @value;
                 my $old = $_;
                 @value = &$function(@value);
                 if (not(@value) or 

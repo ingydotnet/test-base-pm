@@ -1,4 +1,9 @@
 ---
+version: 0.57
+date:    Thu Mar 26 16:42:03 PDT 2009
+changes:
+- Allow value of undef to be filtered without warnings.
+---
 version: 0.56
 date:    Sat Mar  7 12:13:32 PST 2009
 changes:
