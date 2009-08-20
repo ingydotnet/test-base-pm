@@ -1,4 +1,9 @@
 ---
+version: 0.59
+date:    Thu Aug 20 14:56:36 PDT 2009
+changes:
+- Fixed test dep bug reported by Alias++.
+---
 version: 0.58
 date:    Thu Mar 26 17:26:13 PDT 2009
 changes:

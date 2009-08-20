@@ -1,4 +1,10 @@
-use Test::Base tests => 3;
+use Test::Base;
+
+BEGIN {
+    skip_all_unless_require('Test::Deep');
+}
+
+plan tests => 3;
 
 filters 'eval';
 
