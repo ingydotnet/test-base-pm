@@ -18,7 +18,7 @@ sub use_test_base {
     $self->include('Test::More');
     $self->include('Test::Builder');
     $self->include('Test::Builder::Module');
-    $self->requires('Filter::Util::Call');
+    $self->test_requires('Filter::Util::Call');
 }
 
 1;
