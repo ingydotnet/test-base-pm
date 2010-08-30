@@ -10,6 +10,8 @@ requires    Filter::Util::Call => '0';
 
 recommends 'Test::Deep';
 
+repository 'http://github.com/ingydotnet/test-base-pm';
+
 clean_files 't/output';
 
 WriteAll;
