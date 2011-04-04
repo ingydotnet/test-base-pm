@@ -6,7 +6,7 @@ use Module::Install::Base;
 
 use vars qw($VERSION @ISA);
 BEGIN {
-    $VERSION = '0.11';
+    $VERSION = '0.60';
     @ISA     = 'Module::Install::Base';
 }
 
@@ -60,7 +60,7 @@ Ingy döt Net <ingy@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2006, 2008. Ingy döt Net.
+Copyright (c) 2006, 2008, 2011. Ingy döt Net.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -7,10 +7,10 @@ SYNOPSIS
         # lib/MyProject/Test.pm
         package MyProject::Test;
         use Test::Base -Base;
-        
-    use MyProject;
-        
-    package MyProject::Test::Filter;
+    
+        use MyProject;
+    
+        package MyProject::Test::Filter;
         use Test::Base::Filter -base;
 
         sub my_filter {
@@ -21,18 +21,18 @@ SYNOPSIS
 
         # t/sample.t
         use MyProject::Test;
-        
-    plan tests => 1 * blocks;
-        
-    run_is input => 'expected';
+    
+        plan tests => 1 * blocks;
+    
+        run_is input => 'expected';
 
         sub local_filter {
             s/my/your/;
         }
-        
-    __END__
-        
-    === Test one (the name of the test)
+    
+        __END__
+    
+        === Test one (the name of the test)
         --- input my_filter local_filter
         my
         input
@@ -40,8 +40,8 @@ SYNOPSIS
         --- expected
         expected
         output
-        
-    === Test two
+    
+        === Test two
         This is an optional description
         of this particular test.
         --- input my_filter
@@ -327,14 +327,14 @@ TEST SPECIFICATION
     Here is a code example:
 
         use Test::Base;
-        
-    delimiters qw(### :::);
+    
+        delimiters qw(### :::);
 
         # test code here
 
         __END__
-        
-    ### Test One
+    
+        ### Test One
         We want to see if foo and bar
         are really the same... 
         ::: foo
@@ -346,12 +346,12 @@ TEST SPECIFICATION
         another bar line
 
         ### Test Two
-        
-    ::: foo
+    
+        ::: foo
         some foo line
         some other foo line
-        
-    ::: bar
+    
+        ::: bar
         some bar line
         some other bar line
 
@@ -477,8 +477,8 @@ FILTERS
         sub foo {
             transform(shift);
         }
-            
-    sub Test::Base::Filter::bar {
+        
+        sub Test::Base::Filter::bar {
             my $self = shift;       # The Test::Base::Filter object
             my $data = shift;
             my $args = $self->current_arguments;
@@ -629,11 +629,11 @@ HISTORY
     concept and usage of "chunks" to "blocks".
 
 AUTHOR
-    Ingy döt Net <ingy@cpan.org>
+    Ingy dÃ¶t Net <ingy@cpan.org>
 
 COPYRIGHT
-    Copyright (c) 2006, 2008, 2009. Ingy döt Net. Copyright (c) 2005. Brian
-    Ingerson.
+    Copyright (c) 2006, 2008, 2009, 2011. Ingy dÃ¶t Net. Copyright (c) 2005.
+    Brian Ingerson.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

@@ -1,7 +1,15 @@
 use Test::Base tests => 2;
 
+sub perl514 {
+    skip "perl-5.14 regexp stringification is different", shift || 1
+        if $] > 5.013;
+}
+
 run_unlike('html', 're1');
-run_is 're1' => 're2';
+
+SKIP: { perl514;
+    run_is 're1' => 're2';
+}
 
 __END__
 

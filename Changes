@@ -1,4 +1,10 @@
 ---
+version: 0.60
+date:    Mon Apr  4 15:51:09 CST 2011
+changes:
+- Applied patch by andk++
+- Make regexp test skip on 5.14 for now.
+---
 version: 0.59
 date:    Thu Aug 20 14:56:36 PDT 2009
 changes:

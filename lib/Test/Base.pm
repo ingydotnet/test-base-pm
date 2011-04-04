@@ -1,10 +1,8 @@
-# TODO:
-#
 package Test::Base;
 use 5.006001;
 use Spiffy 0.30 -Base;
 use Spiffy ':XXX';
-our $VERSION = '0.59';
+our $VERSION = '0.60';
 
 my @test_more_exports;
 BEGIN {
@@ -535,7 +533,7 @@ sub _strict_warnings() {
 sub tie_output() {
     my $handle = shift;
     die "No buffer to tie" unless @_;
-    tie $handle, 'Test::Base::Handle', $_[0];
+    tie *$handle, 'Test::Base::Handle', $_[0];
 }
 
 sub no_diff {
@@ -1365,7 +1363,7 @@ Ingy döt Net <ingy@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2006, 2008, 2009. Ingy döt Net.
+Copyright (c) 2006, 2008, 2009, 2011. Ingy döt Net.
 Copyright (c) 2005. Brian Ingerson.
 
 This program is free software; you can redistribute it and/or modify it
