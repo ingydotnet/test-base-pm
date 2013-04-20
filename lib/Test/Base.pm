@@ -256,8 +256,8 @@ sub is($$;$) {
     }
     else {
         $name = '' unless defined $name;
-        ok $actual eq $expected,
-           $name . "\n" . Text::Diff::diff(\$expected, \$actual);
+        ok $actual eq $expected, $name;
+        diag Text::Diff::diff(\$expected, \$actual);
     }
 }
 
