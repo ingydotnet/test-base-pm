@@ -57,22 +57,14 @@ YYY
 --- expected
 1..1
 not ok 1 - big diff
-# @@ -1,4 +1,4 @@
-#  one
-#  two
-# -three
-#  four
-# +five
-# 
-#   Failed test 'big diff
-# @@ -1,4 +1,4 @@
-#  one
-#  two
-# -three
-#  four
-# +five
-# '
+#   Failed test 'big diff'
 #   in /tmp/test-blocks-321 at line 3.
+# @@ -1,4 +1,4 @@
+#  one
+#  two
+# -three
+#  four
+# +five
 # Looks like you failed 1 test of 1.
 
 
@@ -93,20 +85,13 @@ YYY
 --- expected
 1..1
 not ok 1 - diff with space
-# @@ -1,3 +1,3 @@
-#  one
-# -two 
-# +two
-#  three
-# 
-#   Failed test 'diff with space
-# @@ -1,3 +1,3 @@
-#  one
-# -two 
-# +two
-#  three
-# '
+#   Failed test 'diff with space'
 #   in /tmp/test-blocks-321 at line 3.
+# @@ -1,3 +1,3 @@
+#  one
+# -two 
+# +two
+#  three
 # Looks like you failed 1 test of 1.
 
 
