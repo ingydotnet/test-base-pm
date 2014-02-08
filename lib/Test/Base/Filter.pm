@@ -337,6 +337,8 @@ sub _write_to {
 
 __DATA__
 
+=encoding utf8
+
 =head1 NAME
 
 Test::Base::Filter - Default Filter Class for Test::Base
@@ -625,7 +627,7 @@ Ingy döt Net <ingy@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2006, 2011. Ingy döt Net. All rights reserved.
+Copyright (c) 2006, 2011, 2014. Ingy döt Net. All rights reserved.
 Copyright (c) 2005. Brian Ingerson. All rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
