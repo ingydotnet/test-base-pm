@@ -1,4 +1,9 @@
 ---
+version: 0.61
+date:    Sat Feb  8 11:08:00 PST 2014
+changes:
+- Switch to dzil
+---
 version: 0.60
 date:    Mon Apr  4 15:51:09 CST 2011
 changes:
