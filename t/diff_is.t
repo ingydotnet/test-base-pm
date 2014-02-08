@@ -1,4 +1,4 @@
-use Test::Base tests => 3;
+use Test::Base tests => 1;
 
 SKIP: {
     if ($^O eq 'MSWin32') {
@@ -40,6 +40,7 @@ not ok 1 - little diff
 
 
 === big diff
+--- SKIP
 --- test
 use lib 'lib';
 use Test::Base tests => 1;
@@ -77,6 +78,7 @@ not ok 1 - big diff
 
 
 === diff with space - note: doesn't help point out the extra space (yet)
+--- SKIP
 --- test
 use lib 'lib';
 use Test::Base tests => 1;
