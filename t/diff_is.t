@@ -1,12 +1,12 @@
-use Test::Base tests => 3;
+use Test::Base tests => 1;
 
 SKIP: {
     if ($^O eq 'MSWin32') {
-        skip 'Win32 doesn\'t have /tmp', 3;
+        skip 'Win32 doesn\'t have /tmp', 1;
     }
     
     unless (Test::Base->have_text_diff) {
-        skip 'The autodiffing feature of Test::Base (which rocketh) requires Text-Diff-0.35 and Algorithm-Diff-1.15 (or greater).', 3;
+        skip 'The autodiffing feature of Test::Base (which rocketh) requires Text-Diff-0.35 and Algorithm-Diff-1.15 (or greater).', 1;
     }
 
     filters { 
