@@ -1,4 +1,9 @@
 ---
+version: 0.62
+date:    Mon Feb 10 14:45:04 PST 2014
+changes:
+- Bad plan in a test
+---
 version: 0.61
 date:    Sat Feb  8 11:08:00 PST 2014
 changes:
