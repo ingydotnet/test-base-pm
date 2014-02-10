@@ -696,7 +696,7 @@ Ingy döt Net <ingy@cpan.org>
 
 # COPYRIGHT
 
-Copyright (c) 2006, 2008, 2009, 2011. Ingy döt Net.
+Copyright (c) 2006, 2008, 2009, 2011, 2014. Ingy döt Net.
 Copyright (c) 2005. Brian Ingerson.
 
 This program is free software; you can redistribute it and/or modify it
