@@ -1,4 +1,4 @@
-use Test::Base tests => 1;
+use Test::Base tests => 3;
 
 SKIP: {
     if ($^O eq 'MSWin32') {
