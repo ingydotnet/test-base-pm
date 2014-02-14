@@ -4,18 +4,18 @@ SKIP: {
     if ($^O eq 'MSWin32') {
         skip 'Win32 doesn\'t have /tmp', 1;
     }
-    
+
     unless (Test::Base->have_text_diff) {
         skip 'The autodiffing feature of Test::Base (which rocketh) requires Text-Diff-0.35 and Algorithm-Diff-1.15 (or greater).', 1;
     }
 
-    filters { 
+    filters {
         test => [qw(exec_perl_stdout smooth_output)],
         expected => 'smooth_output',
     };
     run_is;
 
-    sub smooth_output { 
+    sub smooth_output {
         s/test-blocks-\d+/test-blocks-321/;
         s/at line \d+\)/at line 000)/;
         s/in (.*) at line (\d+)/at $1 line $2/; # for Test::Simple 0.65
@@ -64,7 +64,7 @@ not ok 1 - big diff
 # -three
 #  four
 # +five
-# 
+#
 #   Failed test 'big diff
 # @@ -1,4 +1,4 @@
 #  one
