@@ -1088,7 +1088,7 @@ useful when you are concentrating on getting a single test to pass. If
 there is more than one block with ONLY, the first one will be chosen.
 
 Because ONLY is very useful for debugging and sometimes you forgot to
-remove the ONLY flag before commiting to the VCS or uploading to CPAN,
+remove the ONLY flag before committing to the VCS or uploading to CPAN,
 Test::Base by default gives you a diag message saying I<I found ONLY
 ... maybe you're debugging?>. If you don't like it, use
 C<no_diag_on_only>.
