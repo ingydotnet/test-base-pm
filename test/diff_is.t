@@ -1,8 +1,8 @@
 use Test::Base tests => 1;
 
 SKIP: {
-    if ($^O eq 'MSWin32') {
-        skip 'Win32 doesn\'t have /tmp', 1;
+    if ($^O eq 'MSWin32' || $^O eq 'android') {
+        skip "$^O doesn't have /tmp", 1;
     }
 
     unless (Test::Base->have_text_diff) {
