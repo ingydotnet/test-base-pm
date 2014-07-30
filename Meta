@@ -1,0 +1,32 @@
+=meta: 0.0.1
+
+name: Test-Base
+version: 0.62
+abstract: A Data Driven Testing Framework
+homepage: https://metacpan.org/release/Test-Base
+
+license: perl
+copyright: 2005-2014. Ingy döt Net.
+author:
+  name: Ingy döt Net
+  email: ingy@cpan.org
+  github: ingydotnet
+  twitter: ingydotnet
+  freenode: ingy
+  homepage: http://ingy.net
+
+requires:
+  perl: 5.8.1
+  Spiffy: 0.30
+
+recommends:
+  Test::Deep: 0
+
+devel:
+  git: git@github.org/ingydotnet/test-base-pm
+  irc: irc.freenode.net/roomname
+  bug: https://github.com/ingydotnet/test-base-pm/issues/
+
+=travis:
+  type: perl
+  irc: irc.perl.org#ingy
