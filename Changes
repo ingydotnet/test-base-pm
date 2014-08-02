@@ -1,4 +1,9 @@
 ---
+version: 0.64
+date:    Fri Aug  1 23:16:11 PDT 2014
+changes:
+- Add Algorithm::Diff and Text::Diff to test.requires
+---
 version: 0.63
 date:    Fri Aug  1 23:04:30 PDT 2014
 changes:

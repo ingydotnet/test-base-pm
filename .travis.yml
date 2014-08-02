@@ -18,8 +18,10 @@ perl:
 install:
 - cpanm --quiet --notest
   Devel::Cover::Report::Coveralls
+  Algorithm::Diff
   Spiffy
   Test::Deep
+  Text::Diff
 
 script:
 - PERL5OPT=-MDevel::Cover=-coverage,statement,branch,condition,path,subroutine

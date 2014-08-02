@@ -1,7 +1,7 @@
 =meta: 0.0.1
 
 name: Test-Base
-version: 0.63
+version: 0.64
 abstract: A Data Driven Testing Framework
 homepage: https://metacpan.org/release/Test-Base
 
@@ -18,6 +18,11 @@ author:
 requires:
   perl: 5.8.1
   Spiffy: 0.30
+
+test:
+  requires:
+    Algorithm::Diff: 0
+    Text::Diff: 0
 
 recommends:
   Test::Deep: 0
