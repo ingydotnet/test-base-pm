@@ -1,4 +1,9 @@
 ---
+version: 0.63
+date:    Mon Feb 10 14:45:04 PST 2014
+changes:
+- Switch to Zilla::Dist
+---
 version: 0.62
 date:    Mon Feb 10 14:45:04 PST 2014
 changes:
@@ -149,7 +154,7 @@ version: 0.37
 date:    Tue Jun  7 11:04:07 PDT 2005
 changes:
 - Implement rking style diff_is
-- Add filters: exec_perl_stdout
+- Add filters `exec_perl_stdout`
 ---
 version: 0.36
 date:    Sun Jun  5 11:49:54 PDT 2005
@@ -157,7 +162,7 @@ changes:
 - add tie_output support
 - suppress warning in accessor
 - support backslash escapes in filter arguments
-- New filters: unchomp chop append eval_stdout eval_stderr eval_all
+- New filters `unchomp chop append eval_stdout eval_stderr eval_all`
 - Add join string to join filter
 - Add a Test-Less index
 ---

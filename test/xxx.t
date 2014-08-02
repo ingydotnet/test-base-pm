@@ -15,6 +15,7 @@ is $error, $block->xxx, $block->name;
 
 sub fix {
     s/\bt\b/test/ if -e 'test';
+    $_;
 }
 
 __DATA__

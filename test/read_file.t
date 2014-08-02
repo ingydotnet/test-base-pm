@@ -2,6 +2,7 @@ use Test::Base;
 
 sub fix {
     s/\bt\b/test/ if -e 'test';
+    $_;
 }
 
 __END__
