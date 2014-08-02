@@ -1,8 +1,8 @@
 ---
 version: 0.63
-date:    Mon Feb 10 14:45:04 PST 2014
+date:    Fri Aug  1 23:04:30 PDT 2014
 changes:
-- Switch to Zilla::Dist
+- Switch to Zilla-Dist
 ---
 version: 0.62
 date:    Mon Feb 10 14:45:04 PST 2014
