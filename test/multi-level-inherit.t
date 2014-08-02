@@ -1,4 +1,8 @@
-use t::TestC tests => 2;
+use strict;
+use File::Basename;
+use lib dirname(__FILE__);
+
+use TestBaseTestC tests => 2;
 
 no_diff;
 pass 'It works';

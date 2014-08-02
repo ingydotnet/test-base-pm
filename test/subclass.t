@@ -1,4 +1,4 @@
-use lib 't';
+use lib -e 't' ? 't' : 'test';
 use TestBass tests => 7;
 
 eval "use Test::Base";

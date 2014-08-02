@@ -23,10 +23,10 @@ recommends:
   Test::Deep: 0
 
 devel:
-  git: git@github.org/ingydotnet/test-base-pm
-  irc: irc.freenode.net/roomname
-  bug: https://github.com/ingydotnet/test-base-pm/issues/
+  git: https://github.com/ingydotnet/test-base-pm
+  bug: https://github.com/ingydotnet/test-base-pm/issues
+  irc: irc.freenode.net#pkg
 
 =travis:
   type: perl
-  irc: irc.perl.org#ingy
+  irc: irc.freenode.net#pkg

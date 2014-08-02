@@ -1,5 +1,5 @@
 use Test::Base tests => 1;
-use lib 't';
+use lib -e 't' ? 't' : 'test';
 
 eval "require 'strict-warnings.test'";
 like "$@",

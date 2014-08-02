@@ -1,7 +1,8 @@
 use Test::Base;
 
+my $t = -e 't' ? 't' : 'test';
 filters 'chomp';
-spec_file 't/spec2';
+spec_file "$t/spec2";
 
 plan tests => 3 * blocks;
 

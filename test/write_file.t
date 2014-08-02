@@ -1,6 +1,19 @@
-use t::BaseTest tests => 4;
+use strict;
+use File::Basename;
+use lib dirname(__FILE__);
 
-my $file = 't/output/foo.txt';
+use TestBaseTest;
+
+if (-e 't') {
+    plan tests => 4;
+}
+else {
+    plan skip_all => "Dist test only";
+}
+
+
+my $t = -e 't' ? 't' : 'test';
+my $file = "$t/output/foo.txt";
 
 ok not(-e $file), "$file doesn't already exist";
 

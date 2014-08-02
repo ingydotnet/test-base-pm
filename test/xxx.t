@@ -13,11 +13,15 @@ $error =~ s/\\/\//g;
 
 is $error, $block->xxx, $block->name;
 
+sub fix {
+    s/\bt\b/test/ if -e 'test';
+}
+
 __DATA__
 === XXX Test
 --- text eval
 +{ foo => 'bar' }
---- xxx
+--- xxx fix
 ---
 foo: bar
 ...

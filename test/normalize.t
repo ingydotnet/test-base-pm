@@ -1,6 +1,7 @@
 use Test::Base tests => 4;
 
-spec_file 't/dos_spec';
+my $t = -e 't' ? 't' : 'test';
+spec_file "$t/dos_spec";
 
 my @blocks = blocks;
 
