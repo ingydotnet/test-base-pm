@@ -1,4 +1,9 @@
 ---
+version: 0.65
+date:    Sat Aug  2 23:48:34 PDT 2014
+changes:
+- Fix copyright years.
+---
 version: 0.64
 date:    Fri Aug  1 23:16:11 PDT 2014
 changes:
