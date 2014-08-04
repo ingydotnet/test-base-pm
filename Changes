@@ -1,4 +1,10 @@
 ---
+version: 0.66
+date:    Mon Aug  4 00:39:44 PDT 2014
+changes:
+- Remove (c) from Copyright
+- Ginish doc to Swim
+---
 version: 0.65
 date:    Sat Aug  2 23:48:34 PDT 2014
 changes:
