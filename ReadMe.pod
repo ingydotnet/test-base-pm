@@ -10,6 +10,10 @@ See http://github.com/ingydotnet/swim-pm#readme
 
 Test::Base - A Data Driven Testing Framework
 
+=for html
+<a href="https://travis-ci.org/ingydotnet/test-base-pm"><img src="https://travis-ci.org/ingydotnet/test-base-pm.png" alt="test-base-pm"></a>
+<a href="https://coveralls.io/r/ingydotnet/test-base-pm?branch=master"><img src="https://coveralls.io/repos/ingydotnet/test-base-pm/badge.png" alt="test-base-pm"></a>
+
 =head1 SYNOPSIS
 
 A new test module:

@@ -3,6 +3,8 @@ Test::Base
 
 A Data Driven Testing Framework
 
+<badge travis coveralls ingydotnet/test-base-pm>
+
 = Synopsis
 
 A new test module:
