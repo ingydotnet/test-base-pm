@@ -86,7 +86,7 @@ Test::Base concentrates on offering reusable data driven patterns, so that you
 can write tests with a minimum of code. At the heart of all testing you have
 inputs, processes and expected outputs. Test::Base provides some clean ways
 for you to express your input and expected output data, so you can spend your
-time focusing on that rather than your code scaffolding.
+    time focusing on that rather than your code scaffolding.
 
 = Exported Functions
 
@@ -402,12 +402,12 @@ when you are concentrating on getting a single test to pass. If there is more
 than one block with ONLY, the first one will be chosen.
 
 Because ONLY is very useful for debugging and sometimes you forgot to remove
-the ONLY flag before commiting to the VCS or uploading to CPAN, Test::Base by
+the ONLY flag before committing to the VCS or uploading to CPAN, Test::Base by
 default gives you a diag message saying /I found ONLY ... maybe you're
 debugging?/. If you don't like it, use `no_diag_on_only`.
 
 A block with a LAST section makes that block the last one in the
-specification. All following blocks will be ignored.
+specification.  All following blocks will be ignored.
 
 = Filters
 
