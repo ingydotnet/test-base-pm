@@ -1,4 +1,9 @@
 ---
+version: 0.69
+date:    Wed Aug  6 09:09:34 PDT 2014
+changes:
+- Add $VERSION back into Test::Base
+---
 version: 0.68
 date:    Wed Aug  6 08:56:09 PDT 2014
 changes:
