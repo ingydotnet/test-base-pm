@@ -1,5 +1,5 @@
 package Test::Base;
-our $VERSION = '0.71';
+our $VERSION = '0.72';
 
 use Spiffy -Base;
 use Spiffy ':XXX';

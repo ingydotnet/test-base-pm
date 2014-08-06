@@ -1,4 +1,9 @@
 ---
+version: 0.72
+date:    Wed Aug  6 10:31:52 PDT 2014
+changes:
+- Dep on new Spiffy-0.40 to get rid of warnings on blead 5.21.x 
+---
 version: 0.71
 date:    Wed Aug  6 09:50:04 PDT 2014
 changes:
