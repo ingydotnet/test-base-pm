@@ -1,4 +1,9 @@
 ---
+version: 0.68
+date:    Wed Aug  6 08:56:09 PDT 2014
+changes:
+- PR/11 and fixes
+---
 version: 0.67
 date:    Tue Aug  5 10:16:09 PDT 2014
 changes:
