@@ -1,4 +1,9 @@
 ---
+version: 0.70
+date:    Wed Aug  6 09:30:03 PDT 2014
+changes:
+- Fixed doc typo
+---
 version: 0.69
 date:    Wed Aug  6 09:09:34 PDT 2014
 changes:
