@@ -1,4 +1,9 @@
 ---
+version: 0.71
+date:    Wed Aug  6 09:50:04 PDT 2014
+changes:
+- Applied PR/4 from schwern++
+---
 version: 0.70
 date:    Wed Aug  6 09:30:03 PDT 2014
 changes:
