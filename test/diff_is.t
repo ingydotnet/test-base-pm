@@ -1,7 +1,7 @@
 use Test::Base tests => 1;
 
 SKIP: {
-    if ($^O eq 'MSWin32' || $^O eq 'android') {
+    if ($^O eq 'MSWin32' or $^O eq 'android') {
         skip "$^O doesn't have /tmp", 1;
     }
 
