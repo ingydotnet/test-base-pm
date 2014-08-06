@@ -19,6 +19,8 @@ SKIP: {
         s/test-blocks-\d+/test-blocks-321/;
         s/at line \d+\)/at line 000)/;
         s/in (.*) at line (\d+)/at $1 line $2/; # for Test::Simple 0.65
+        s/TAP version 13//;
+        s{Looks like you failed (\d+) (tests?) of (\d+)\.}{$1 $2 of $3 failed.};
         s/^\n//gm;
     }
 }
@@ -95,20 +97,13 @@ YYY
 --- expected
 1..1
 not ok 1 - diff with space
-# @@ -1,3 +1,3 @@
-#  one
-# -two 
-# +two
-#  three
-# 
-#   Failed test 'diff with space
-# @@ -1,3 +1,3 @@
-#  one
-# -two 
-# +two
-#  three
-# '
+#   Failed test 'diff with space'
 #   in /tmp/test-blocks-321 at line 3.
+# @@ -1,3 +1,3 @@
+#  one
+# -two 
+# +two
+#  three
 # Looks like you failed 1 test of 1.
 
 

@@ -2,7 +2,7 @@ use Test::Base;
 
 plan eval { require YAML; 1 }
   ? (tests => 1 * blocks)
-  : skip_all => 'Requires YAML';
+  : (skip_all => 'Requires YAML');
 
 my ($block) = blocks;
 
