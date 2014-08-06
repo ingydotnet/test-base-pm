@@ -21,8 +21,8 @@ requires:
 
 test:
   requires:
-    Algorithm::Diff: 0
-    Text::Diff: 0
+    Algorithm::Diff: 1.15
+    Text::Diff: 0.35
 
 recommends:
   Test::Deep: 0
