@@ -1,4 +1,10 @@
 ---
+version: 0.74
+date:    Wed Aug  6 13:36:29 PDT 2014
+changes:
+- Add dependency on Filter::Util::Call just to be sure
+- Spiffy requires it and we already require Spiffy
+---
 version: 0.73
 date:    Wed Aug  6 13:24:45 PDT 2014
 changes:
@@ -7,7 +13,7 @@ changes:
 version: 0.72
 date:    Wed Aug  6 10:31:52 PDT 2014
 changes:
-- Dep on new Spiffy-0.40 to get rid of warnings on blead 5.21.x 
+- Dep on new Spiffy-0.40 to get rid of warnings on blead 5.21.x
 ---
 version: 0.71
 date:    Wed Aug  6 09:50:04 PDT 2014
@@ -252,7 +258,7 @@ changes:
 version: 0.30
 date:    Mon May 23 16:39:23 PDT 2005
 changes:
-- Further delay filtering by no running filters when chunks is called in 
+- Further delay filtering by no running filters when chunks is called in
   scalar context.
 ---
 version: 0.29
@@ -282,7 +288,7 @@ changes:
   undocumented.
 ---
 version: 0.25
-date:    
+date:   Sat May   7 01:02:03 PDT 2005
 changes:
 - Add `LAST` special section name to stop at a certain test.
 - Add test for strict/warnings filter.
