@@ -289,7 +289,7 @@ many functions of its own:
   You can capture STDOUT and STDERR for operations with this function:
 
     my $out = '';
-    tie_output(*STDOUT, $buffer);
+    tie_output(*STDOUT, $out);
     print "Hey!\n";
     print "Che!\n";
     untie *STDOUT;
