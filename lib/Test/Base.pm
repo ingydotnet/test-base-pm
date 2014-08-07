@@ -4,6 +4,19 @@ our $VERSION = '0.74';
 use Spiffy -Base;
 use Spiffy ':XXX';
 
+my $HAS_PROVIDER;
+BEGIN {
+    $HAS_PROVIDER = eval { require Test::Builder::Provider; 1 };
+
+    if ($HAS_PROVIDER) {
+        Test::Builder::Provider->import('provides');
+    }
+    else {
+        *provides = sub { 1 };
+    }
+}
+
+
 my @test_more_exports;
 BEGIN {
     @test_more_exports = qw(
@@ -241,10 +254,11 @@ sub have_text_diff {
         $Algorithm::Diff::VERSION >= 1.15;
 }
 
+provides 'is';
 sub is($$;$) {
     (my ($self), @_) = find_my_self(@_);
     my ($actual, $expected, $name) = @_;
-    local $Test::Builder::Level = $Test::Builder::Level + 1;
+    local $Test::Builder::Level = $Test::Builder::Level + 1 unless $HAS_PROVIDER;
     if ($ENV{TEST_SHOW_NO_DIFFS} or
          not defined $actual or
          not defined $expected or
