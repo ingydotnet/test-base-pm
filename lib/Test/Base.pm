@@ -1,12 +1,12 @@
 package Test::Base;
-our $VERSION = '0.76';
+our $VERSION = '0.77';
 
 use Spiffy -Base;
 use Spiffy ':XXX';
 
 my $HAS_PROVIDER;
 BEGIN {
-    $HAS_PROVIDER = eval { require Test::Builder::Provider; 1 };
+    $HAS_PROVIDER = eval "require Test::Builder::Provider; 1";
 
     if ($HAS_PROVIDER) {
         Test::Builder::Provider->import('provides');
