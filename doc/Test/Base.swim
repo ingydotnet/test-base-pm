@@ -549,7 +549,7 @@ too. Just create new Test::Base objects and use the functions as methods.
 
   # ... etc
 
-= THE `Test::Base::Block` CLASS
+= The `Test::Base::Block` Class
 
 In Test::Base, blocks are exposed as Test::Base::Block objects. This section
 lists the methods that can be called on a Test::Base::Block object. Of course,
