@@ -20,6 +20,7 @@ install:
 - cpanm --quiet --notest
   Devel::Cover::Report::Coveralls
   Algorithm::Diff
+  ExtUtils::MakeMaker
   Filter::Util::Call
   Spiffy
   Test::Deep
