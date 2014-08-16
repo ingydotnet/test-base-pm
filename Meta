@@ -1,7 +1,7 @@
 =meta: 0.0.1
 
 name: Test-Base
-version: 0.79
+version: 0.80
 abstract: A Data Driven Testing Framework
 homepage: https://metacpan.org/release/Test-Base
 
@@ -25,6 +25,8 @@ test:
     Algorithm::Diff: 1.15
     ExtUtils::MakeMaker: 6.52
     Text::Diff: 0.35
+  generate:
+    000-require-modules.t: true
 
 recommends:
   Test::Deep: 0

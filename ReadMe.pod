@@ -562,7 +562,7 @@ too. Just create new Test::Base objects and use the functions as methods.
 
     # ... etc
 
-=head1 THE `TEST::BASE::BLOCK` CLASS
+=head1 THE C<TEST::BASE::BLOCK> CLASS
 
 In Test::Base, blocks are exposed as Test::Base::Block objects. This section
 lists the methods that can be called on a Test::Base::Block object. Of course,
