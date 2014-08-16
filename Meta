@@ -1,7 +1,7 @@
 =meta: 0.0.1
 
 name: Test-Base
-version: 0.80
+version: 0.81
 abstract: A Data Driven Testing Framework
 homepage: https://metacpan.org/release/Test-Base
 
