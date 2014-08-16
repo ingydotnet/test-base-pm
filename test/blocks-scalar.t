@@ -6,7 +6,7 @@ for (1..blocks) {
     ok 1, 'Jusk checking my blocking';
 }
 
-is scalar(blocks), 2, 
+is scalar(blocks), 2,
    'correct number of blocks';
 
 sub this_filter_fails {

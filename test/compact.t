@@ -42,7 +42,7 @@ there is foo
 TOO HIGH TO DIE
 
 === Can have no value
---- (this):   
+--- (this):
 --- (that)
 
 === Can have ': ' in value

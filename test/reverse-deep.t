@@ -19,12 +19,12 @@ __DATA__
     [qw(a b c)],
     [qw(d e f)],
     [qw(g h i j)]
-], 
+],
 [
     [qw(a b c)],
     [qw(d e f)],
     [qw(g h i j)]
-], 
+],
 
 --- yyy) eval
 [

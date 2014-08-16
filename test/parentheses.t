@@ -26,9 +26,9 @@ __DATA__
 --- foo)
 some text
 
-=== 
+===
 --- (foo): some text
 
-=== 
+===
 --- (foo) split join: some text
 

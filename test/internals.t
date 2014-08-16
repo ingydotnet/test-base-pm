@@ -9,21 +9,21 @@ use Test::More;
 sub foo {
     my $self = shift;
     my $value = shift;
-    
+
 # Test access to Test::Base::Filter object.
-    ok ref($self), 
+    ok ref($self),
        '$self is an object';
-    is ref($self), 
-       'Test::Base::Filter', 
+    is ref($self),
+       'Test::Base::Filter',
        '$self is a Test:Base::Filter object';
     like $value,
          qr/^This is some .*text.\z/,
-         'Filter value is correct';   
+         'Filter value is correct';
 
 # Test access to Test::Base::Block object.
     my $block = $self->current_block;
-    is ref($block), 
-       'Test::Base::Block', 
+    is ref($block),
+       'Test::Base::Block',
        'Have a reference to our block object';
 
     ok not($block->is_filtered),
@@ -63,11 +63,11 @@ sub foo {
 # Test access to Test::Base object.
     my $blocks = $block->blocks_object;
     my $block_list = $blocks->block_list;
-    is ref($block_list), 
+    is ref($block_list),
        'ARRAY',
        'Have an array of all blocks';
 
-    is scalar(@$block_list), 
+    is scalar(@$block_list),
        '2',
        'Is there 2 blocks?';
 

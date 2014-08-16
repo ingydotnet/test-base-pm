@@ -17,7 +17,7 @@ __DATA__
 ===
 --- xxx foo=123,456
 
-=== 
+===
 --- xxx bar=---holy-crow+++
 one
   two

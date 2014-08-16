@@ -2,16 +2,16 @@ use Test::Base tests => 5;
 
 my $block1 = [blocks]->[0];
 my @values = $block1->grocery;
-is scalar(@values), 3, 
+is scalar(@values), 3,
    'check list context';
-is_deeply \@values, ['apples', 'oranges', 'beef jerky'], 
+is_deeply \@values, ['apples', 'oranges', 'beef jerky'],
    'list context content';
 
 my $block2 = [blocks]->[1];
-is_deeply $block2->todo, 
+is_deeply $block2->todo,
 [
-    'Fix YAML', 
-    'Fix Inline', 
+    'Fix YAML',
+    'Fix Inline',
     'Fix Test::Base',
 ], 'deep block from index';
 

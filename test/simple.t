@@ -7,7 +7,7 @@ for my $block (blocks) {
     is(
         uc($block->pod),
         $block->upper,
-        $block->name, 
+        $block->name,
     );
 }
 

@@ -2,7 +2,7 @@ use Test::Base tests => 6;
 
 my @lines1 = [blocks]->[0]->text1;
 ok @lines1 == 3;
-is_deeply 
+is_deeply
 \@lines1,
 [
     "One\n",

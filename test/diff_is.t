@@ -90,7 +90,7 @@ two
 three
 XXX
 one
-two 
+two
 three
 YYY
 
@@ -101,7 +101,7 @@ not ok 1 - diff with space
 #   in /tmp/test-blocks-321 at line 3.
 # @@ -1,3 +1,3 @@
 #  one
-# -two 
+# -two
 # +two
 #  three
 # Looks like you failed 1 test of 1.

@@ -6,7 +6,7 @@ use Test::Base -Base;
 
 our @EXPORT = qw(run_like_hell);
 
-sub run_like_hell() { 
+sub run_like_hell() {
     (my ($self), @_) = find_my_self(@_);
     $self->run_like(@_);
 }

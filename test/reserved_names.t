@@ -17,7 +17,7 @@ for my $word (qw(
              )) {
     my $blocks = my_blocks($word);
     eval {$blocks->blocks};
-    like $@, qr{'$word' is a reserved name}, 
+    like $@, qr{'$word' is a reserved name},
          "$word is a bad name";
 }
 

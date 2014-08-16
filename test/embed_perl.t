@@ -10,7 +10,7 @@ sub reverse { join '', reverse split '', shift }
 
 __DATA__
 
-<<< delimiters '+++', '***'; 
+<<< delimiters '+++', '***';
 filters 'chomp';
 >>>
 

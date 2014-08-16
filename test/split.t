@@ -21,7 +21,7 @@ The other tests don't work yet.
 
 ===
 --- ok lines split
-I am 
+I am
 ok. Are you
 ok?
 
