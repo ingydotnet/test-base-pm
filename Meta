@@ -1,19 +1,25 @@
-=meta: 0.0.1
+=meta: 0.0.2
 
 name: Test-Base
-version: 0.82
+version: 0.83
 abstract: A Data Driven Testing Framework
 homepage: https://metacpan.org/release/Test-Base
-
+language: perl
 license: perl
-copyright: 2005-2014. Ingy döt Net.
+copyright: 2005-2014
+
 author:
   name: Ingy döt Net
   email: ingy@cpan.org
+  homepage: http://ingy.net
   github: ingydotnet
   twitter: ingydotnet
   freenode: ingy
-  homepage: http://ingy.net
+
+devel:
+  git: https://github.com/ingydotnet/test-base-pm
+  bug: https://github.com/ingydotnet/test-base-pm/issues
+  irc: irc.freenode.net#pkg
 
 requires:
   perl: 5.8.1
@@ -25,17 +31,9 @@ test:
     Algorithm::Diff: 1.15
     ExtUtils::MakeMaker: 6.52
     Text::Diff: 0.35
-  generate:
-    000-require-modules.t: true
 
 recommends:
   Test::Deep: 0
 
-devel:
-  git: https://github.com/ingydotnet/test-base-pm
-  bug: https://github.com/ingydotnet/test-base-pm/issues
-  irc: irc.freenode.net#pkg
-
-=travis:
-  type: perl
-  irc: irc.freenode.net#pkg
+zild:
+  test-000: require
