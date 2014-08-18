@@ -17,8 +17,10 @@ SKIP: {
 
     sub smooth_output {
         s/test-blocks-\d+/test-blocks-321/;
-        s/at line \d+\)/at line 000)/;
-        s/in (.*) at line (\d+)/at $1 line $2/; # for Test::Simple 0.65
+        # XXX Busted across various Test::Simple versions
+        # s/at line \d+\)/at line 000)/;
+        # s/in (.*) at line (\d+)/at $1 line $2/; # for Test::Simple 0.65
+        s/(   )(.*) line (\d+)\./$1at <file> line <number>./;
         s/TAP version 13//;
         s{Looks like you failed (\d+) (tests?) of (\d+)\.}{$1 $2 of $3 failed.};
         s/^\n//gm;
@@ -35,7 +37,7 @@ is('a b c', 'a b x', 'little diff');
 1..1
 not ok 1 - little diff
 #   Failed test 'little diff'
-#   in /tmp/test-blocks-321 at line 3.
+#   at <file> line <number>.
 #          got: 'a b c'
 #     expected: 'a b x'
 # Looks like you failed 1 test of 1.

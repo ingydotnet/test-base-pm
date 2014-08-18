@@ -1,4 +1,9 @@
 ---
+version: 0.86
+date:    Mon Aug 18 08:29:20 PDT 2014
+changes:
+- Fix for issue/15
+---
 version: 0.85
 date:    Mon Aug 18 08:07:52 PDT 2014
 changes:
