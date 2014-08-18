@@ -1,4 +1,11 @@
 ---
+version: 0.85
+date:    Mon Aug 18 08:07:52 PDT 2014
+changes:
+- Pull Module::Install::TestBase out of Test::Base
+- It will be released in separate dist
+- Was causing Test::Base to fail tests
+---
 version: 0.84
 date:    Sat Aug 16 15:08:32 PDT 2014
 changes:

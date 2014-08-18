@@ -646,8 +646,8 @@ a method in the test code.
 =head1 DISTRIBUTION SUPPORT
 
 You might be thinking that you do not want to use Test::Base in you modules,
-because it adds an installation dependency. Fear not. Module::Install takes
-care of that.
+because it adds an installation dependency. Fear not.
+L<Module::Install::TestBase> takes care of that.
 
 Just write a Makefile.PL that looks something like this:
 
