@@ -3,7 +3,7 @@ use Test::Base tests => 2;
 is next_block->escaped,
    "line1\nline2";
 is next_block->escaped,
-   "	foo\n		bar\n";
+   "\tfoo\n\t\tbar\n";
 
 __END__
 

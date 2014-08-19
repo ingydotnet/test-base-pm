@@ -1,4 +1,9 @@
 ---
+version: 0.87
+date:    Tue Aug 19 16:35:34 PDT 2014
+changes:
+- Replace tabs with spaces
+---
 version: 0.86
 date:    Mon Aug 18 08:29:20 PDT 2014
 changes:
