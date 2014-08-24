@@ -1,5 +1,5 @@
 package Test::Base;
-our $VERSION = '0.87';
+our $VERSION = '0.88';
 
 use Spiffy -Base;
 use Spiffy ':XXX';
@@ -508,7 +508,6 @@ sub _spec_init {
     local $/;
     my $spec;
     if (my $spec_file = $self->_spec_file) {
-        warn "$spec_file";
         open FILE, $spec_file or die $!;
         $spec = <FILE>;
         close FILE;

@@ -1,4 +1,9 @@
 ---
+version: 0.88
+date:    Sun Aug 24 08:09:16 PDT 2014
+changes:
+- Remove a debugging line.
+---
 version: 0.87
 date:    Tue Aug 19 16:35:34 PDT 2014
 changes:
