@@ -31,6 +31,7 @@ test:
     Algorithm::Diff: 1.15
     ExtUtils::MakeMaker: 6.52
     Text::Diff: 0.35
+    Test::Stream: 1.301001
 
 recommends:
   Test::Deep: 0

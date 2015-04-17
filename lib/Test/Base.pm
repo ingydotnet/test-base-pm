@@ -1,21 +1,9 @@
 package Test::Base;
 our $VERSION = '0.88';
 
+use Test::Stream qw/listen context/;
 use Spiffy -Base;
 use Spiffy ':XXX';
-
-my $HAS_PROVIDER;
-BEGIN {
-    $HAS_PROVIDER = eval "require Test::Builder::Provider; 1";
-
-    if ($HAS_PROVIDER) {
-        Test::Builder::Provider->import('provides');
-    }
-    else {
-        *provides = sub { 1 };
-    }
-}
-
 
 my @test_more_exports;
 BEGIN {
@@ -107,16 +95,12 @@ sub import() {
     goto &Spiffy::import;
 }
 
-# Wrap Test::Builder::plan
-my $plan_code = \&Test::Builder::plan;
 my $Have_Plan = 0;
-{
-    no warnings 'redefine';
-    *Test::Builder::plan = sub {
-        $Have_Plan = 1;
-        goto &$plan_code;
-    };
-}
+listen {
+    my ($hub, $e) = @_;
+    return unless $e->isa('Test::Stream::Event::Plan');
+    $Have_Plan = 1;
+};
 
 my $DIED = 0;
 $SIG{__DIE__} = sub { $DIED = 1; die @_ };
@@ -254,11 +238,14 @@ sub have_text_diff {
         $Algorithm::Diff::VERSION >= 1.15;
 }
 
-provides 'is';
 sub is($$;$) {
     (my ($self), @_) = find_my_self(@_);
     my ($actual, $expected, $name) = @_;
-    local $Test::Builder::Level = $Test::Builder::Level + 1 unless $HAS_PROVIDER;
+
+    # Grab the context, we do not use it directly, but need to keep the ref in
+    # memory until this scope ends.
+    my $ctx = context();
+
     if ($ENV{TEST_SHOW_NO_DIFFS} or
          not defined $actual or
          not defined $expected or
@@ -307,9 +294,14 @@ sub END {
 
 sub run_compare() {
     (my ($self), @_) = find_my_self(@_);
+
+    # Grab the context, we do not use it directly, but need to keep the ref in
+    # memory until this scope ends.
+    my $ctx = context();
+
     $self->_assert_plan;
     my ($x, $y) = $self->_section_names(@_);
-    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
     for my $block (@{$self->block_list}) {
         next unless exists($block->{$x}) and exists($block->{$y});
         $block->run_filters unless $block->is_filtered;
@@ -329,9 +321,14 @@ sub run_compare() {
 
 sub run_is() {
     (my ($self), @_) = find_my_self(@_);
+
+    # Grab the context, we do not use it directly, but need to keep the ref in
+    # memory until this scope ends.
+    my $ctx = context();
+
     $self->_assert_plan;
     my ($x, $y) = $self->_section_names(@_);
-    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
     for my $block (@{$self->block_list}) {
         next unless exists($block->{$x}) and exists($block->{$y});
         $block->run_filters unless $block->is_filtered;
