@@ -25,6 +25,7 @@ requires:
   perl: 5.8.1
   Filter::Util::Call: 0
   Spiffy: 0.40
+  Test::More: 0.88
 
 test:
   requires:
