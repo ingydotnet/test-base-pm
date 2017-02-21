@@ -25,6 +25,9 @@ requires:
   perl: 5.8.1
   Filter::Util::Call: 0
   Spiffy: 0.40
+  Carp: 0
+  strict: 0
+  warnings: 0
 
 test:
   requires:
