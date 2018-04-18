@@ -26,6 +26,7 @@ requires:
   Filter::Util::Call: 0
   Spiffy: 0.40
   Test::More: 0.88
+  Scalar::Util: 1.07
 
 test:
   requires:
