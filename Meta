@@ -1,12 +1,12 @@
 =meta: 0.0.2
 
 name: Test-Base
-version: 0.88
+version: 0.89
 abstract: A Data Driven Testing Framework
 homepage: https://metacpan.org/release/Test-Base
 language: perl
 license: perl
-copyright: 2005-2014
+copyright: 2005-2018
 
 author:
   name: Ingy döt Net
